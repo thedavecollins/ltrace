@@ -50,4 +50,5 @@ testsuite/ltrace.minor/trace-exec
 testsuite/ltrace.minor/trace-exec1
 testsuite/ltrace.minor/trace-fork
 testsuite/ltrace.torture/signals
+testsuite/env.exp
 
