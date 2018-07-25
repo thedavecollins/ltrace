@@ -660,6 +660,11 @@ ltelf_read_elf(struct ltelf *lte, const char *filename)
 	if (lte->dynsym == NULL || lte->dynstr == NULL) {
 		fprintf(stderr, "Couldn't find .dynsym or .dynstr in \"%s\"\n",
 			filename);
+		if(options.follow) {
+			/* if we a following and we call a statically linked binary
+			 * we just what to keep going */
+			return 0;
+		}
 		exit(EXIT_FAILURE);
 	}
 
